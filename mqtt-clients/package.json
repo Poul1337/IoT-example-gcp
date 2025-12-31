@@ -1,0 +1,23 @@
+{
+  "name": "emqx-mqtt-clients",
+  "version": "1.0.0",
+  "description": "MQTT test clients for EMQX broker",
+  "main": "index.js",
+  "scripts": {
+    "test:with-cert": "node client-with-cert.js",
+    "test:without-cert": "node client-without-cert.js",
+    "test": "npm run test:with-cert && npm run test:without-cert"
+  },
+  "keywords": [
+    "mqtt",
+    "emqx",
+    "iot",
+    "tls"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "mqtt": "^5.3.1"
+  }
+}
+
