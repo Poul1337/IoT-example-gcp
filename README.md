@@ -13,7 +13,7 @@ Projekt Terraform do wdrożenia brokera EMQX na GCP z zabezpieczeniem TLS client
 
 ## 🏗️ Architektura
 
-- **EMQX Broker**: 2 instancje VM w Managed Instance Group
+- **EMQX Broker**: 1 instancja VM w Managed Instance Group (można zwiększyć przez `emqx_instance_count`)
 - **Load Balancer**: TCP Load Balancer dla portów prod (8883) i dev (8884)
 - **Bezpieczeństwo**: TLS z client certificate authentication
 - **Porty**:
@@ -50,7 +50,7 @@ gcloud services enable storage.googleapis.com
 - `project_id`: ID projektu GCP (domyślnie: "iot-proj-482921")
 - `region`: Region GCP (domyślnie: "europe-west1")
 - `zone`: Strefa GCP (domyślnie: "europe-west1-b")
-- `emqx_instance_count`: Liczba instancji EMQX (domyślnie: 2)
+- `emqx_instance_count`: Liczba instancji EMQX (domyślnie: 1)
 - `emqx_machine_type`: Typ maszyny (domyślnie: "e2-medium")
 - `emqx_version`: Wersja EMQX (domyślnie: "5.3.2")
 

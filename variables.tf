@@ -31,7 +31,7 @@ variable "emqx_machine_type" {
 variable "emqx_instance_count" {
   description = "Number of EMQX instances"
   type        = number
-  default     = 2
+  default     = 1
 }
 
 variable "mqtt_port" {
